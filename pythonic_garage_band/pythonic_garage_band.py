@@ -58,6 +58,7 @@ class Band (Musician) :
         return Band.solos
     
 
+
     @classmethod
     def to_list(cls):
         return cls.instances
