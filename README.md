@@ -1,4 +1,5 @@
 ## LAB - Class 04
+
 **Project: Pythonic Garage Band**
 
 
@@ -20,6 +21,6 @@ How to run application ?
 
 
 
-How do you run tests?
+How to run tests?
 
           pytest band.py
