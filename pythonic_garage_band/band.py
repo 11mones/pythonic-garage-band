@@ -1,5 +1,13 @@
 
 class Musician :
+    """
+    A class representing a musician.
+    and every musician has a name
+    and the properties is 
+    __str__(): Returns a string representation of the musician.
+    __repr__(): Returns a string representation of the musician instance.
+
+    """
 
     def __init__(self , name):
         self.name = name
@@ -10,6 +18,11 @@ class Musician :
         return f"{self.__class__.__name__} instance. Name = {self.name}" 
 
 class Guitarist (Musician):
+    """
+    A class representing a guitarist.
+    has get instrument method witch return the instrument he plays, and play solo witch returns the solo that he can play
+
+    """
 
     def get_instrument(self):
         return "guitar"
@@ -19,6 +32,12 @@ class Guitarist (Musician):
 
 class Drummer (Musician):
 
+    """
+    A class representing a drummer.
+    has get instrument method witch return the instrument he plays, and play solo witch returns the solo that he can play
+
+    """
+
     def get_instrument(self):
         return "drums"
     
@@ -27,6 +46,11 @@ class Drummer (Musician):
 
 
 class Bassist (Musician):
+    """
+    A class representing a bassist.
+    has get instrument method witch return the instrument he plays, and play solo witch returns the solo that he can play
+
+    """
 
     def get_instrument(self):
         return "bass"
@@ -35,6 +59,16 @@ class Bassist (Musician):
 
 
 class Band (Musician) : 
+
+    """A class representing a band, has :
+        bands (list): A list of band members.
+        solos (list): A list of solos performed by band members.
+        all_bands (list): A list of all band instances.
+        and play_solos() method witch returns the solos by band members and returns a list of solos and to_list() witch returns a list of all band instances.
+
+    """
+
+
     bands = []
     solos = []
     all_bands = []
