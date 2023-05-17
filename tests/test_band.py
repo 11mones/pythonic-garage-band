@@ -1,11 +1,11 @@
 import pytest
 
 from pythonic_garage_band.band import (
+    Band,
     Musician,
     Guitarist,
     Bassist,
     Drummer,
-    Band,
 )
 
 
@@ -25,6 +25,7 @@ def test_guitarist_repr():
     assert actual == expected
 
 
+
 def test_drummer_str():
     sheila = Drummer("Sheila E.")
     actual = str(sheila)
@@ -40,6 +41,7 @@ def test_drummer_repr():
     assert actual == expected
 
 
+
 def test_bassist_str():
     meshell = Bassist("Meshell Ndegeocello")
     actual = str(meshell)
@@ -47,11 +49,13 @@ def test_bassist_str():
     assert actual == expected
 
 
+
 def test_bassist_repr():
     meshell = Bassist("Meshell Ndegeocello")
     actual = repr(meshell)
     expected = "Bassist instance. Name = Meshell Ndegeocello"
     assert actual == expected
+
 
 
 def test_band_name():
@@ -99,6 +103,7 @@ def test_individual_solos(one_band):
             assert member.play_solo() == "rattle boom crash"
 
 
+
 def test_band_members(one_band):
 
     assert len(one_band.members) == 3
@@ -123,7 +128,6 @@ def test_play_solos_for_whole_band(one_band):
     assert solos[0] == "face melting guitar solo"
     assert solos[1] == "bom bom buh bom"
     assert solos[2] == "rattle boom crash"
-
 
 
 
@@ -182,9 +186,6 @@ def clean():
     Check the docs for that. Hint: it uses yield
     """
     Band.instances = []
-
-
-
 
 
 #######################
